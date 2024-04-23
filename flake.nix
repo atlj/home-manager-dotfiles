@@ -17,7 +17,12 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in {
       homeConfigurations."burakguner" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+        # allow unfree
+        pkgs = pkgs // {
+          config = {
+            allowUnfree = true;
+          };
+        };
 
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
