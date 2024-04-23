@@ -15,26 +15,22 @@
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "23.11"; # Please read the comment before changing.
-
   home.packages = with pkgs; [
     # Development
     neovim
-    lazygit
     pandoc
 
     # Utils
-    zoxide
     wget
+    fzf
 
     # Languages
     go
-    cargo
-    rustc
+    rustup
     ruby
-    cocoapods
 
     # JS
-    nodejs_18
+    nodejs_21
     corepack_18
     watchman
     bun
