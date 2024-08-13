@@ -30,11 +30,17 @@
     ruby
 
     # JS
-    nodejs_21
+    nodejs_18
     corepack_18
     watchman
     bun
 
+    fastlane
+
+    imagemagick
+    graphicsmagick
+
+    yt-dlp
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
