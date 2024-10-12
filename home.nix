@@ -18,11 +18,14 @@
   home.packages = with pkgs; [
     # Development
     neovim
+    tree-sitter
     pandoc
+    zulu17
 
     # Utils
     wget
     fzf
+    raycast
 
     # Languages
     go
@@ -35,8 +38,10 @@
     watchman
     bun
 
-    fastlane
+    asciiquarium-transparent
 
+    fastlane
+    scrcpy
     imagemagick
     graphicsmagick
 
