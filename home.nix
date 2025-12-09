@@ -1,6 +1,4 @@
 { config, pkgs, ... }:
-
-
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -17,35 +15,83 @@
   home.stateVersion = "24.05"; # Please read the comment before changing.
   home.packages = with pkgs; [
     # Development
-    neovim
+    # neovim
     tree-sitter
     pandoc
-    zulu17
+    zulu21
+    swiftlint
+    swiftformat
+    fastlane
+    sqlite
+    gdb
+    cmake
+    xcpretty
+
+    docker
+    ngrok
+    colima
+    libtool
+    docker-credential-helpers
 
     # Utils
     wget
     fzf
     raycast
+    socat
+    xcodegen
+    qbittorrent-nox
+    ios-deploy
+
+    ffmpeg
 
     # Languages
     go
     rustup
     ruby
+    python39
+    poppler_utils
+    elixir
 
     # JS
-    nodejs_18
-    corepack_18
+    nodejs_22
     watchman
     bun
 
     asciiquarium-transparent
 
+    # Tools
     fastlane
     scrcpy
     imagemagick
     graphicsmagick
+    maestro
+    helix
+    ccache
+    ninja
+    gettext
+    flatbuffers_23
 
     yt-dlp
+
+    highlight
+    unixODBC
+
+    devenv
+
+    wezterm
+    raycast
+    zoxide
+    lazygit
+    delta
+    git
+    btop
+    ripgrep
+    openssl
+    cmake
+    libimobiledevice
+
+    avahi
+    gh
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
