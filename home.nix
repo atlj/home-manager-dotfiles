@@ -1,6 +1,4 @@
 { config, pkgs, ... }:
-
-
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -20,32 +18,60 @@
     neovim
     tree-sitter
     pandoc
-    zulu17
+    zulu21
+    swiftlint
+    fastlane
+    sqlite
+    gdb
+    cmake
+
+    docker
+    ngrok
+    colima
+    libtool
+    docker-credential-helpers
 
     # Utils
     wget
     fzf
     raycast
+    socat
+    xcodegen
+    qbittorrent-nox
+    ios-deploy
+
+    ffmpeg
 
     # Languages
     go
     rustup
     ruby
+    python39
+    poppler_utils
+    elixir
 
     # JS
-    nodejs_18
-    corepack_18
+    nodejs_22
     watchman
     bun
 
     asciiquarium-transparent
 
+    # Tools
     fastlane
     scrcpy
     imagemagick
     graphicsmagick
+    maestro
+    helix
+    ccache
 
     yt-dlp
+
+    highlight
+    unixODBC
+
+    devenv
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
