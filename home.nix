@@ -54,6 +54,7 @@
 
     # JS
     nodejs_22
+    corepack_22
     watchman
     bun
 
