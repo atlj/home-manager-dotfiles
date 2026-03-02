@@ -14,16 +14,17 @@
   outputs = { nixpkgs, home-manager, ... }:
     let
       system = "aarch64-darwin";
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = import nixpkgs {
+            system = "aarch64-darwin";
+            config.allowUnfree = true; 
+            overlays = [
+              (import ./nvim-overlay.nix)
+            ];
+          };
     in {
       homeConfigurations."burakguner" = home-manager.lib.homeManagerConfiguration {
         # allow unfree
-        pkgs = pkgs // {
-          config = {
-            allowUnfree = true;
-          };
-        };
-
+        pkgs = pkgs;
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
         modules = [ ./home.nix ];
