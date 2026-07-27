@@ -14,98 +14,93 @@
   # release notes.
   home.stateVersion = "24.05"; # Please read the comment before changing.
   home.packages = with pkgs; [
-    # Development
+    # Editors & Terminals
     neovim
+    helix
+    wezterm
+
+    # Build & Development Tools
     tree-sitter
     pandoc
-    zulu21
-    swiftlint
-    swiftformat
-    fastlane
-    sqlite
-    gdb
     cmake
+    ninja
+    ccache
     xcpretty
-
-    docker
-    ngrok
-    colima
+    gettext
+    flatbuffers_23
+    openssl
     libtool
-    docker-credential-helpers
+    unixODBC
+    devenv
+    direnv
 
-    # Utils
-    wget
-    fzf
-    raycast
-    socat
-    xcodegen
-    qbittorrent-nox
-    ios-deploy
+    # Database
+    sqlite
 
-    ffmpeg
-
-    # Languages
+    # Languages & Runtimes
+    zulu21
+    lua
     go
     rustup
     ruby
-    python39
-    poppler_utils
     elixir
 
-    # JS
-    nodejs_22
-    corepack_22
+    # JavaScript Tooling
+    nodejs_24
+    corepack_24
     watchman
     bun
 
-    asciiquarium-transparent
-
-    # Tools
+    # Mobile Development
+    swiftlint
+    swiftformat
     fastlane
+    xcodegen
     scrcpy
+    maestro
+    libimobiledevice
+
+    # Containers & Networking
+    docker
+    colima
+    docker-credential-helpers
+    ngrok
+    avahi
+    socat
+    wget
+
+    # AI / Coding Assistants
+    github-copilot-cli
+    claude-code
+    codex
+    ollama
+
+    # Media & Graphics
+    ffmpeg
     imagemagick
     graphicsmagick
-    maestro
-    helix
-    ccache
-    ninja
-    gettext
-    flatbuffers_23
-
     yt-dlp
+    aseprite
 
-    highlight
-    unixODBC
-
-    devenv
-
-    wezterm
-    raycast
+    # System & Shell Utilities
+    fzf
     zoxide
     lazygit
     delta
     git
+    gh
     btop
     ripgrep
-    openssl
-    cmake
-    libimobiledevice
+    colordiff
+    highlight
 
-    avahi
-    gh
+    # macOS Desktop Apps
+    raycast
+    keycastr
+    qbittorrent-nox
 
-    # # It is sometimes useful to fine-tune packages, for example, by applying
-    # # overrides. You can do that directly here, just don't forget the
-    # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
-    # # fonts?
-    # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
-
-    # # You can also create simple shell scripts directly inside your
-    # # configuration. For example, this adds a command 'my-hello' to your
-    # # environment:
-    # (pkgs.writeShellScriptBin "my-hello" ''
-    #   echo "Hello, ${config.home.username}!"
-    # '')
+    # Misc / Fun
+    asciiquarium-transparent
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
